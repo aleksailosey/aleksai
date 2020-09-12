@@ -1,4 +1,7 @@
 import Head from 'next/head';
+import Nav from 'components/nav/nav';
+import Content from 'components/content/content';
+import Left from 'components/left/left';
 
 export default function App({ Component, pageProps }) {
   return (
@@ -6,7 +9,11 @@ export default function App({ Component, pageProps }) {
       <Head>
         <link rel='icon' href='/favicon.svg' alt='Letter "A" icon' />
       </Head>
-      <Component {...pageProps} />
+      <Nav />
+      <Content>
+        <Left />
+        <Component {...pageProps} />
+      </Content>
     </>
   );
 }

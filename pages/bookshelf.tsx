@@ -6,6 +6,7 @@ export default function Bookshelf() {
       <Head>
         <title>Bookshelf | Aleksai Losey</title>
       </Head>
+      <span>Bookshelf</span>
     </>
   );
 }

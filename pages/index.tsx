@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Nav from 'components/nav/nav';
 
 export default function Home() {
   return (
@@ -7,7 +6,7 @@ export default function Home() {
       <Head>
         <title>Aleksai Losey</title>
       </Head>
-      <Nav />
+      <span>Home page</span>
     </>
   );
 }
