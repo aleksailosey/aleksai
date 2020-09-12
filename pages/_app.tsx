@@ -9,12 +9,11 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <link rel='icon' href='/favicon.svg' alt='Letter "A" icon' />
+        <link rel='icon' href='/favicon.svg' />
       </Head>
       <Nav />
       <Content>
         <Left />
-
         <Component {...pageProps} />
       </Content>
     </>
