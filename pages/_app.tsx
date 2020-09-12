@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import PathContext from 'contexts/PathContext';
 
+import 'styles/index.sass';
 import 'styles/blob.css';
 
 export default function App({ Component, pageProps }) {

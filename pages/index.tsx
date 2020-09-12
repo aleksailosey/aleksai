@@ -7,9 +7,10 @@ export default function Home() {
       <Head>
         <title>Aleksai Losey</title>
       </Head>
-      <Area title='Home'>
-        <span>Home</span>
-      </Area>
+      <Area
+        title='Home'
+        description="Hey! My name is Aleksai Losey. I'm currently a university student. I like to code, run, and rock climb."
+      />
     </>
   );
 }

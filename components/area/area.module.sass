@@ -2,10 +2,11 @@
 
 #AreaWrap
   display: flex
-  flex-grow: 1
+  flex-grow: 0
   flex-shrink: 0
   flex-direction: column
   padding-left: 5%
+  max-width: calc(95% - 300px)
 
 #AreaTitleCont
   display: flex
@@ -17,3 +18,21 @@
   font-size: 1.5em
   font-family: $avenir_medium
   color: #000
+
+#AreaDescriptionCont
+  display: flex
+  flex-grow: 0
+  flex-shrink: 1
+  padding-bottom: 20px
+  width: 100%
+  word-wrap: break-word
+
+#AreaDescription
+  font-size: 1.1em
+  font-family: $avenir_roman
+  color: #000
+
+@media (max-width: 800px)
+  #AreaWrap
+    padding-left: 0px
+    max-width: 100%

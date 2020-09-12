@@ -7,9 +7,10 @@ export default function Bookshelf() {
       <Head>
         <title>Bookshelf | Aleksai Losey</title>
       </Head>
-      <Area title='Bookshelf'>
-        <span>Bookshelf</span>
-      </Area>
+      <Area
+        title='Bookshelf'
+        description='Here is a list of books that I have read and am currently reading. If you want to suggest a book for me to read, please feel free to open up a pull request!'
+      ></Area>
     </>
   );
 }

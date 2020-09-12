@@ -10,61 +10,43 @@ export default function Left() {
 
   return (
     <div id={styles.LeftWrap}>
-      <div
-        className={classNames({
-          [styles.LeftItemCont]: true,
-          [styles.LeftItemContActive]: path === '/'
-        })}
-        onClick={() => {
-          setPath('/');
-        }}
-      >
-        <span className={styles.LeftText}>Home</span>
-      </div>
-      <div
-        className={classNames({
-          [styles.LeftItemCont]: true,
-          [styles.LeftItemContActive]: path === '/bookshelf'
-        })}
-        onClick={() => {
-          setPath('/bookshelf');
-        }}
-      >
-        <span className={styles.LeftText}>Bookshelf</span>
-      </div>
-      <div
-        className={classNames({
-          [styles.LeftItemCont]: true,
-          [styles.LeftItemContActive]: path === '/running'
-        })}
-        onClick={() => {
-          setPath('/running');
-        }}
-      >
-        <span className={styles.LeftText}>Running</span>
-      </div>
-      <div
-        className={classNames({
-          [styles.LeftItemCont]: true,
-          [styles.LeftItemContActive]: path === '/stuff'
-        })}
-        onClick={() => {
-          setPath('/stuff');
-        }}
-      >
-        <span className={styles.LeftText}>Fun stuff</span>
-      </div>
-      <div
-        className={classNames({
-          [styles.LeftItemCont]: true,
-          [styles.LeftItemContActive]: path === '/contact'
-        })}
-        onClick={() => {
-          setPath('/contact');
-        }}
-      >
-        <span className={styles.LeftText}>Contact me</span>
-      </div>
+      {[
+        {
+          name: 'Home',
+          path: '/'
+        },
+        {
+          name: 'Bookshelf',
+          path: '/bookshelf'
+        },
+        {
+          name: 'Running',
+          path: '/running'
+        },
+        {
+          name: 'Fun stuff',
+          path: '/stuff'
+        },
+        {
+          name: 'Contact me',
+          path: '/contact'
+        }
+      ].map((elem) => {
+        return (
+          <div
+            key={elem.name}
+            className={classNames({
+              [styles.LeftItemCont]: true,
+              [styles.LeftItemContActive]: path === elem.path
+            })}
+            onClick={() => {
+              setPath(elem.path);
+            }}
+          >
+            <span className={styles.LeftText}>{elem.name}</span>
+          </div>
+        );
+      })}
     </div>
   );
 }

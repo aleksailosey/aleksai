@@ -7,7 +7,10 @@ export default function Home() {
       <Head>
         <title>Fun stuff | Aleksai Losey</title>
       </Head>
-      <Area title='Fun stuff'>
+      <Area
+        title='Fun stuff'
+        description='Here is a small aggregate of stuff I find either compelling, interesting, or strange.'
+      >
         <span>Fun stuff</span>
       </Area>
     </>
