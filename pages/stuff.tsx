@@ -5,10 +5,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Aleksai Losey</title>
+        <title>Fun stuff | Aleksai Losey</title>
       </Head>
-      <Area title='Home'>
-        <span>Home</span>
+      <Area title='Fun stuff'>
+        <span>Fun stuff</span>
       </Area>
     </>
   );

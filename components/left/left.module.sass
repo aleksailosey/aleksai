@@ -1,7 +1,41 @@
+@import 'styles/fonts'
+
 #LeftWrap
   display: flex
   flex-direction: column
   flex-grow: 1
   flex-shrink: 0
   max-width: 300px
-  background-color: #fcfcfc
+
+.LeftItemCont
+  display: flex
+  flex-grow: 1
+  flex-shrink: 0
+  padding-top: 1.5em
+  padding-bottom: 1.5em
+  padding-left: 1em
+  margin-bottom: 10px
+  cursor: pointer
+  border-radius: 5px
+
+  &:hover
+    background-color: #f1f1f1
+    transition: 100ms
+
+  &:active
+    background-color: #ced1d6
+    transition: 100ms
+
+.LeftItemContActive
+  background-color: #ced1d6 !important
+
+.LeftText
+  font-family: $avenir_roman
+  font-size: 1em
+  color: #111
+  user-select: none
+
+
+@media (max-width: 800px)
+  #LeftWrap
+    display: none

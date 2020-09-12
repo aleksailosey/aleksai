@@ -1,14 +1,19 @@
 import styles from './logo.module.sass';
 
+import { useContext } from 'react';
+import PathContext from 'contexts/PathContext';
+
 export default function Logo() {
+  const { path, setPath } = useContext(PathContext);
+
   return (
     <div
       id={styles.LogoCont}
       onClick={() => {
         if (window.scrollY > 5) {
           window.scrollTo(0, 0);
-        } else if (window.location.pathname !== '/') {
-          window.location.href = '/';
+        } else if (path !== '/') {
+          setPath('/');
         }
       }}
     >
