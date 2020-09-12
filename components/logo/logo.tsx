@@ -8,7 +8,7 @@ export default function Logo() {
         if (window.scrollY > 5) {
           window.scrollTo(0, 0);
         } else if (window.location.pathname !== '/') {
-          window.location = '/';
+          window.location.href = '/';
         }
       }}
     >
