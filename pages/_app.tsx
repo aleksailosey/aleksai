@@ -22,6 +22,7 @@ export default function App({ Component, pageProps }) {
   useEffect(() => {
     router.beforePopState((event) => {
       pushPath(window.location.pathname);
+      return true;
     });
   });
 
