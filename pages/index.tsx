@@ -6,6 +6,7 @@ export default function Home() {
       <Head>
         <title>Aleksai Losey</title>
       </Head>
+
       <span>Home page</span>
     </>
   );

@@ -1,0 +1,99 @@
+.tk-blob {
+  animation: blob-turn var(--time, 10s) linear infinite;
+  fill: var(--fill, #008cff);
+  position: relative;
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+}
+
+.tk-blob svg {
+  animation: blob-skew calc(var(--time, 10s) * 0.5) linear 0s infinite;
+  transform-origin: center;
+}
+
+.tk-blob svg path {
+  animation: blob-scale calc(var(--time, 10s) * 0.5) ease-in-out 0s infinite;
+  transform-origin: center;
+}
+
+@keyframes blob-turn {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blob-skew {
+  0% {
+    transform: skewY(0deg);
+  }
+  13% {
+    transform: skewY(calc((1.8deg) * var(--amount, 5)));
+  }
+  18% {
+    transform: skewY(calc((2.2deg) * var(--amount, 5)));
+  }
+  24% {
+    transform: skewY(calc((2.48deg) * var(--amount, 5)));
+  }
+  25% {
+    transform: skewY(calc((2.5deg) * var(--amount, 5)));
+  }
+  26% {
+    transform: skewY(calc((2.48deg) * var(--amount, 5)));
+  }
+  32% {
+    transform: skewY(calc((2.2deg) * var(--amount, 5)));
+  }
+  37% {
+    transform: skewY(calc((1.8deg) * var(--amount, 5)));
+  }
+  50% {
+    transform: skewY(0deg);
+  }
+  63% {
+    transform: skewY(calc((-1.8deg) * var(--amount, 5)));
+  }
+  68% {
+    transform: skewY(calc((-2.2deg) * var(--amount, 5)));
+  }
+  74% {
+    transform: skewY(calc((-2.48deg) * var(--amount, 5)));
+  }
+  75% {
+    transform: skewY(calc((-2.5deg) * var(--amount, 5)));
+  }
+  76% {
+    transform: skewY(calc((-2.48deg) * var(--amount, 5)));
+  }
+  82% {
+    transform: skewY(calc((-2.2deg) * var(--amount, 5)));
+  }
+  87% {
+    transform: skewY(calc((-1.8deg) * var(--amount, 5)));
+  }
+  100% {
+    transform: skewY(0deg);
+  }
+}
+
+@keyframes blob-scale {
+  0% {
+    transform: scaleX(0.9) scaleY(1);
+  }
+  25% {
+    transform: scaleX(0.9) scaleY(0.9);
+  }
+  50% {
+    transform: scaleX(1) scaleY(0.9);
+  }
+  75% {
+    transform: scaleX(0.9) scaleY(0.9);
+  }
+  100% {
+    transform: scaleX(0.9) scaleY(1);
+  }
+}

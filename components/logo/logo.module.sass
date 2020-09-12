@@ -5,13 +5,22 @@
   display: flex
   justify-content: center
   align-items: center
-  padding-left: 0.5em
-  padding-right: 0.5em
+  padding-left: 2em
+  padding-right: 2em
   height: 60px
   user-select: none
   cursor: pointer
+  position: relative
+  overflow: hidden
 
 #Logo
   font-size: 1.2em
   font-family: $avenir_medium
-  color: #111
+  color: #fff
+  white-space: nowrap
+  z-index: 1
+
+#BlobCont
+  position: absolute
+  width: 180px
+  height: 180px
