@@ -1,6 +1,12 @@
 import styles from './area.module.sass';
 
-export default function Area({ title, description, children }) {
+type AreaProps = {
+  title: string;
+  description?: string;
+  children?: any;
+};
+
+export default function Area({ title, description, children }: AreaProps) {
   return (
     <div id={styles.AreaWrap}>
       <div id={styles.AreaTitleCont}>
