@@ -10,6 +10,8 @@ import Nav from 'components/nav/nav';
 import Content from 'components/content/content';
 import Left from 'components/left/left';
 
+import { State } from 'types/State';
+
 import 'styles/index.sass';
 import 'styles/blob.css';
 
@@ -20,7 +22,7 @@ export default function App({ Component, pageProps }) {
   const { pathname, push, replace } = router;
 
   const [path, setPath] = useState<string>(pathname);
-  const [state, setState] = useState<object>({});
+  const [state, setState] = useState<State>({});
   const [language, setLanguage] = useState<string>('en');
 
   const pushPath = (path: string) => {
