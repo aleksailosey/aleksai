@@ -38,7 +38,6 @@ export default function Home() {
         {images.map((image, index) => {
           return <AreaImage {...image} />;
         })}
-        <Area />
       </Area>
     </>
   );
