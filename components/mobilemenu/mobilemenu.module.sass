@@ -1,13 +1,17 @@
+@import 'styles/fonts'
+
 #MobileMenu
   display: flex
   flex-direction: column
   position: fixed
   top: 0px
   left: 0px
+  bottom: 0px
   width: 100vw
-  height: 100vh
   z-index: 500
   background-color: #fff
+  overflow-y: scroll
+  padding-top: 60px
 
 .MobileMenuHidden
   display: none !important
@@ -17,15 +21,23 @@
   align-items: center
   flex-grow: 0
   flex-shrink: 0
+  width: 90%
+  padding-left: 5%
   padding-right: 5%
   height: 60px
   background-color: #fff
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1)
+  position: fixed
+  top: 0px
 
 #HeaderLeft
   display: flex
   flex-grow: 1
   flex-shrink: 0
+
+#MobileBlob
+  width: 35px
+  height: 35px
 
 #HeaderRight
   display: flex
@@ -43,6 +55,38 @@
   &:hover
     opacity: 0.5
     transition: opacity 100ms
+
+.SectionCont
+  display: flex
+  flex-grow: 0
+  flex-shrink: 0
+  padding-left: 5%
+  align-items: center
+  height: 60px
+  margin-top: 10px
+  margin-bottom: 10px
+  background-position: center
+  transition: background 300ms
+
+  &:hover
+    background: #f1f1f1 radial-gradient(circle, transparent 1%, #f1f1f1 1%) center/15000%
+
+  &:active:not(.SectionContActive)
+    background-color: #ced1d6
+    background-size: 100%
+    transition: background 0s
+
+  &:not(.SectionContActive)
+    cursor: pointer
+
+.SectionContActive
+  background-color: #ced1d6 !important
+
+.SectionText
+  font-family: $avenir_roman
+  font-size: 1em
+  color: #111
+  user-select: none
 
 @media (min-width: 800px)
   #MobileMenu
