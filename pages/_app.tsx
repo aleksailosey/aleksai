@@ -12,8 +12,9 @@ import 'styles/index.sass';
 import 'styles/blob.css';
 
 export default function App({ Component, pageProps }) {
-  const router = useRouter();
+  const [show, setShow] = useState<boolean>(false);
 
+  const router = useRouter();
   const { pathname, push, replace } = router;
 
   const [path, setPath] = useState<string>(pathname);
@@ -37,26 +38,34 @@ export default function App({ Component, pageProps }) {
     });
   });
 
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setShow(true);
+  //   }, 1000);
+  // }, []);
+
   return (
-    <RouterContext.Provider
-      value={{
-        path,
-        pushPath,
-        replacePath,
-        state,
-        setState,
-        language,
-        setLanguage
-      }}
-    >
-      <Head>
-        <link rel='icon' href='/favicon.svg' />
-      </Head>
-      <Nav />
-      <Content>
-        <Left />
-        <Component {...pageProps} />
-      </Content>
-    </RouterContext.Provider>
+    <>
+      <RouterContext.Provider
+        value={{
+          path,
+          pushPath,
+          replacePath,
+          state,
+          setState,
+          language,
+          setLanguage
+        }}
+      >
+        <Head>
+          <link rel='icon' href='/favicon.svg' />
+        </Head>
+        <Nav />
+        <Content>
+          <Left />
+          <Component {...pageProps} />
+        </Content>
+      </RouterContext.Provider>
+    </>
   );
 }

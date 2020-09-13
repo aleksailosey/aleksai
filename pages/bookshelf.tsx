@@ -1,5 +1,33 @@
+import { ReactNode } from 'react';
 import Head from 'next/head';
 import Area from 'components/area/area';
+import AreaSection from 'components/area/areasection';
+import AreaLink from 'components/area/arealink';
+
+const currentlyReading = [
+  {
+    text:
+      'Working in Public: The Making and Maintenance of Open Source Software',
+    link:
+      'https://www.amazon.com/Working-Public-Making-Maintenance-Software/dp/0578675862'
+  }
+];
+const haveRead = [];
+
+type Book = {
+  text: string;
+  link: string;
+};
+
+function populateLinks(books: Book[]): ReactNode {
+  return (
+    <>
+      {books.map((book: Book) => {
+        return <AreaLink {...book} />;
+      })}
+    </>
+  );
+}
 
 export default function Bookshelf() {
   return (
@@ -24,7 +52,11 @@ export default function Bookshelf() {
             <span>!</span>
           </span>
         }
-      ></Area>
+      >
+        <AreaSection title='What I am currently reading:' />
+        {populateLinks(currentlyReading)}
+        <AreaSection title='What I have recently read:' />
+      </Area>
     </>
   );
 }
