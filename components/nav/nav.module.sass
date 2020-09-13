@@ -21,6 +21,22 @@
 
 #NavRight
   display: flex
+  align-items: center
   flex-grow: 1
   flex-shrink: 0
   justify-content: flex-end
+
+#MenuIcon
+  display: none
+  width: 20px
+  height: 20px
+  cursor: pointer
+
+  &:hover
+    opacity: 0.5
+    transition: opacity 100ms
+
+
+@media (max-width: 800px)
+  #MenuIcon
+    display: block

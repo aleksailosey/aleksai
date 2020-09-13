@@ -15,6 +15,7 @@ export default function Nav() {
           link='https://www.strava.com/athletes/48447345'
         />
         <Social path='/github.svg' link='https://github.com/aleksailosey' />
+        <img id={styles.MenuIcon} src='/menu.svg' />
       </div>
     </div>
   );
