@@ -3,6 +3,7 @@ import styles from './area.module.sass';
 
 export default function AreaImage({ path, description }) {
   const [loading, setLoading] = useState<boolean>(true);
+  const [traceLoad, setTraceLoad] = useState<boolean>(true);
 
   var image;
   if (process.env.NODE_ENV === 'production') {
@@ -13,6 +14,9 @@ export default function AreaImage({ path, description }) {
     setTimeout(() => {
       setLoading(false);
     }, 500);
+    setTimeout(() => {
+      setTraceLoad(false);
+    }, 5000);
   }, []);
 
   return (
@@ -24,10 +28,10 @@ export default function AreaImage({ path, description }) {
         </div>
       ) : null}
       {process.env.NODE_ENV === 'production' ? (
-        <>
-          <img className={styles.AreaImage} src={image.trace} />
-          <img className={styles.AreaImage} src={image.src} />
-        </>
+        <img
+          className={styles.AreaImage}
+          src={traceLoad ? image.trace : image.src}
+        />
       ) : (
         <img className={styles.AreaImage} src={`/images${path}`} />
       )}
