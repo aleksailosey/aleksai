@@ -3,6 +3,8 @@ import * as classNames from 'classnames';
 
 import useRouter from 'hooks/useRouter';
 
+import Social from 'components/social/social';
+
 export default function MobileMenu({ show }) {
   const { path, pushPath, setState } = useRouter();
 
@@ -32,6 +34,14 @@ export default function MobileMenu({ show }) {
             onClick={() => setState({ mobileMenu: false })}
           />
         </div>
+      </div>
+      <div id={styles.Footer}>
+        <Social path='/twitter.svg' link='https://twitter.com/aleksailosey' />
+        <Social
+          path='/strava.svg'
+          link='https://www.strava.com/athletes/48447345'
+        />
+        <Social path='/github.svg' link='https://github.com/aleksailosey' />
       </div>
       {[
         {
