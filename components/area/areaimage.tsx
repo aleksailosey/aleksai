@@ -19,7 +19,7 @@ export default function AreaImage({ path, description }) {
         </div>
       ) : null}
 
-      <img className={styles.AreaImage} src={path} />
+      <img className={styles.AreaImage} src={require('../../images' + path)} />
     </div>
   );
 }
