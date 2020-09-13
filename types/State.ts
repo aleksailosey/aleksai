@@ -1,3 +1,3 @@
 export type State = {
-  mobileMenu: boolean;
+  mobileMenu?: boolean;
 };
