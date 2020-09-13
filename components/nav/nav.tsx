@@ -13,12 +13,14 @@ export default function Nav() {
         <Logo />
       </div>
       <div id={styles.NavRight}>
-        <Social path='/twitter.svg' link='https://twitter.com/aleksailosey' />
-        <Social
-          path='/strava.svg'
-          link='https://www.strava.com/athletes/48447345'
-        />
-        <Social path='/github.svg' link='https://github.com/aleksailosey' />
+        <div id={styles.NavRightSocialIcons}>
+          <Social path='/twitter.svg' link='https://twitter.com/aleksailosey' />
+          <Social
+            path='/strava.svg'
+            link='https://www.strava.com/athletes/48447345'
+          />
+          <Social path='/github.svg' link='https://github.com/aleksailosey' />
+        </div>
         <img
           id={styles.MenuIcon}
           src='/menu.svg'

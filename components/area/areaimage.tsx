@@ -12,7 +12,7 @@ export default function AreaImage({ path, description }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 500);
   }, []);
 
   return (
@@ -24,10 +24,7 @@ export default function AreaImage({ path, description }) {
         </div>
       ) : null}
       {process.env.NODE_ENV === 'production' ? (
-        <img
-          className={styles.AreaImage}
-          src={loading ? image.trace : image.src}
-        />
+        <img className={styles.AreaImage} src={image.src} />
       ) : (
         <img className={styles.AreaImage} src={`/images${path}`} />
       )}
