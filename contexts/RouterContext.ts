@@ -6,7 +6,8 @@ const PathContext = createContext({
   replacePath: (path: string) => {},
   state: {},
   setState: {},
-  language: 'en'
+  language: 'en',
+  setLanguage: (language: string) => {}
 });
 
 export default PathContext;

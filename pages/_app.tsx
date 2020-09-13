@@ -18,6 +18,7 @@ export default function App({ Component, pageProps }) {
 
   const [path, setPath] = useState<string>(pathname);
   const [state, setState] = useState<object>({});
+  const [language, setLanguage] = useState<string>('en');
 
   const pushPath = (path: string) => {
     push(path);
@@ -38,7 +39,15 @@ export default function App({ Component, pageProps }) {
 
   return (
     <RouterContext.Provider
-      value={{ path, pushPath, replacePath, state, setState }}
+      value={{
+        path,
+        pushPath,
+        replacePath,
+        state,
+        setState,
+        language,
+        setLanguage
+      }}
     >
       <Head>
         <link rel='icon' href='/favicon.svg' />
