@@ -7,7 +7,7 @@ export default function AreaImage({ path, description }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 1500);
+    }, 0);
   }, []);
 
   return (
