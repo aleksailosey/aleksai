@@ -3,8 +3,10 @@ import styles from './area.module.sass';
 
 export default function AreaImage({ path, description }) {
   const [loading, setLoading] = useState<boolean>(true);
+
+  var image;
   if (process.env.NODE_ENV === 'production') {
-    const image = require('../../public/images' + path + '?trace');
+    image = require('../../public/images' + path + '?trace');
   }
 
   useEffect(() => {
