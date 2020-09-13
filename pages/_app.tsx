@@ -13,7 +13,7 @@ import 'styles/index.sass';
 import 'styles/blob.css';
 
 export default function App({ Component, pageProps }) {
-  const [show, setShow] = useState<boolean>(true);
+  const [show, setShow] = useState<boolean>(false);
 
   const router = useRouter();
   const { pathname, push, replace } = router;
