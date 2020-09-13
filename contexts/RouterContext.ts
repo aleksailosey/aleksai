@@ -5,7 +5,7 @@ const PathContext = createContext({
   pushPath: (path: string) => {},
   replacePath: (path: string) => {},
   state: {},
-  setState: {},
+  setState: (state: object) => {},
   language: 'en',
   setLanguage: (language: string) => {}
 });

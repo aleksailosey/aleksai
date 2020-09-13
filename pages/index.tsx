@@ -4,7 +4,7 @@ import Area from 'components/area/area';
 import styles from 'components/area/area.module.sass';
 
 export default function Home() {
-  const { path, pushPath } = useRouter();
+  const { pushPath } = useRouter();
 
   return (
     <>
@@ -32,6 +32,13 @@ export default function Home() {
             <span>, or </span>
             <span className={styles.vLink} onClick={() => pushPath('/stuff')}>
               my link collection
+            </span>
+            <span>
+              . If you have something interesting to share or would just like to
+              reach out, please don't hesitate to{' '}
+            </span>
+            <span className={styles.vLink} onClick={() => pushPath('/contact')}>
+              contact me
             </span>
             <span>.</span>
           </span>
