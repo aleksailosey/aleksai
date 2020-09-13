@@ -7,7 +7,7 @@ export default function AreaImage({ path, description }) {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 0);
+    }, 500);
   }, []);
 
   return (
@@ -19,7 +19,10 @@ export default function AreaImage({ path, description }) {
         </div>
       ) : null}
 
-      <img className={styles.AreaImage} src={require('../../images' + path)} />
+      <img
+        className={styles.AreaImage}
+        src={require('../../images' + path + '?lqip')}
+      />
     </div>
   );
 }
