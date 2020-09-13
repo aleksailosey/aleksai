@@ -10,9 +10,28 @@ const currentlyReading = [
       'Working in Public: The Making and Maintenance of Open Source Software',
     link:
       'https://www.amazon.com/Working-Public-Making-Maintenance-Software/dp/0578675862'
+  },
+  {
+    text: 'I Got a Name: The Jim Croce Story',
+    link: 'https://www.amazon.com/Got-Name-Jim-Croce-Story/dp/0306821788'
+  },
+  {
+    text: 'Dune (Book 1)',
+    link: 'https://www.amazon.com/Dune-Chronicles-Book-1/dp/0441013597'
   }
 ];
-const haveRead = [];
+const haveRead = [
+  {
+    text: 'Chaos Monkeys: Obscene Fortune and Random Failure in Silicon Valley',
+    link:
+      'https://www.amazon.com/Chaos-Monkeys-Obscene-Fortune-Failure/dp/0062458191/ref=sr_1_1?crid=3UNDZEBZ5O5X0&dchild=1&keywords=chaos+monkeys+obscene+fortune+and+random+failure+in+silicon+valley&qid=1600018803&s=books&sprefix=chaos+mon%2Cstripbooks%2C170&sr=1-1'
+  },
+  {
+    text: 'Hackers & Painters: Big Ideas from the Computer Age',
+    link:
+      'https://www.amazon.com/Hackers-Painters-Big-Ideas-Computer/dp/1449389554'
+  }
+];
 
 type Book = {
   text: string;
@@ -56,6 +75,7 @@ export default function Bookshelf() {
         <AreaSection title='What I am currently reading:' />
         {populateLinks(currentlyReading)}
         <AreaSection title='What I have recently read:' />
+        {populateLinks(haveRead)}
       </Area>
     </>
   );
