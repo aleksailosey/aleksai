@@ -23,14 +23,43 @@
   display: flex
   flex-grow: 0
   flex-shrink: 1
-  padding-bottom: 20px
   width: 100%
   word-wrap: break-word
+  font-size: 1.1em !important
+  padding-bottom: 20px
 
-#AreaDescription
-  font-size: 1.1em
+#AreaDescriptionCont span
   font-family: $avenir_roman
   color: #000
+
+#AreaDescriptionCont a
+  font-family: $avenir_roman
+  color: #008cff
+  text-decoration: underline
+  cursor: pointer
+
+  &:hover
+    opacity: 0.75
+    transition: 100ms
+
+.AreaLinkCont
+  display: flex
+  flex-grow: 1
+  flex-shrink: 0
+  padding-top: 20px
+  padding-bottom: 20px
+
+.AreaLink
+  font-size: 1.1em
+  font-family: $avenir_roman
+  color: #008cff
+  text-decoration: underline
+  cursor: pointer
+  word-break: break-all
+
+  &:hover
+    opacity: 0.75
+    transition: 100ms
 
 @media (max-width: 800px)
   #AreaWrap

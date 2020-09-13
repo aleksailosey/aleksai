@@ -9,7 +9,21 @@ export default function Bookshelf() {
       </Head>
       <Area
         title='Bookshelf'
-        description='Here is a list of books that I have read or am currently reading. If you want to suggest a book for me to read, please feel free to open up a pull request!'
+        descriptionMarkDown={
+          <span>
+            <span>
+              Here is a list of books that I have read or am currently reading.
+              If you want to suggest a book for me to read, please feel free to{' '}
+            </span>
+            <a
+              href='https://github.com/aleksailosey/aleksai/pulls'
+              target='__blank'
+            >
+              create a pull request
+            </a>
+            <span>!</span>
+          </span>
+        }
       ></Area>
     </>
   );

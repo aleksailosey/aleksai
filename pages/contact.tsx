@@ -7,9 +7,18 @@ export default function Home() {
       <Head>
         <title>Contact | Aleksai Losey</title>
       </Head>
-      <Area title='Contact me'>
-        <span>Contact</span>
-      </Area>
+      <Area
+        title='Contact me'
+        descriptionMarkDown={
+          <span>
+            <span>Please feel free to contact me via email at </span>
+            <a href='mailto:aleksailosey@gmail.com' target='__blank'>
+              aleksailosey@gmail.com
+            </a>
+            <span>.</span>
+          </span>
+        }
+      ></Area>
     </>
   );
 }

@@ -1,12 +1,19 @@
 import styles from './area.module.sass';
+import { ReactNode } from 'react';
 
 type AreaProps = {
   title: string;
   description?: string;
+  descriptionMarkDown?: ReactNode;
   children?: any;
 };
 
-export default function Area({ title, description, children }: AreaProps) {
+export default function Area({
+  title,
+  description,
+  descriptionMarkDown,
+  children
+}: AreaProps) {
   return (
     <div id={styles.AreaWrap}>
       <div id={styles.AreaTitleCont}>
@@ -16,6 +23,9 @@ export default function Area({ title, description, children }: AreaProps) {
         <div id={styles.AreaDescriptionCont}>
           <span id={styles.AreaDescription}>{description}</span>
         </div>
+      ) : null}
+      {descriptionMarkDown ? (
+        <div id={styles.AreaDescriptionCont}>{descriptionMarkDown}</div>
       ) : null}
       {children}
     </div>
