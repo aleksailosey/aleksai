@@ -39,11 +39,11 @@ export default function App({ Component, pageProps }) {
     });
   });
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setShow(true);
-  //   }, 1000);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setShow(true);
+    }, 700);
+  }, []);
 
   return (
     <>
