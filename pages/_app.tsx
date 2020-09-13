@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import RouterContext from 'contexts/RouterContext';
 
 import ScreenLoader from 'components/screenloader/screenloader';
+import MobileMenu from 'components/mobilemenu/mobilemenu';
 import Head from 'next/head';
 import Nav from 'components/nav/nav';
 import Content from 'components/content/content';
@@ -46,28 +47,27 @@ export default function App({ Component, pageProps }) {
   }, []);
 
   return (
-    <>
-      <RouterContext.Provider
-        value={{
-          path,
-          pushPath,
-          replacePath,
-          state,
-          setState,
-          language,
-          setLanguage
-        }}
-      >
-        <ScreenLoader {...{ show }} />
-        <Head>
-          <link rel='icon' href='/favicon.svg' />
-        </Head>
-        <Nav />
-        <Content>
-          <Left />
-          <Component {...pageProps} />
-        </Content>
-      </RouterContext.Provider>
-    </>
+    <RouterContext.Provider
+      value={{
+        path,
+        pushPath,
+        replacePath,
+        state,
+        setState,
+        language,
+        setLanguage
+      }}
+    >
+      <ScreenLoader {...{ show }} />
+      <MobileMenu {...{ show: state.mobileMenu }} />
+      <Head>
+        <link rel='icon' href='/favicon.svg' />
+      </Head>
+      <Nav />
+      <Content>
+        <Left />
+        <Component {...pageProps} />
+      </Content>
+    </RouterContext.Provider>
   );
 }

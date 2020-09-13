@@ -27,7 +27,7 @@ export default function Home() {
             </span>
             <span>, </span>
             <span className={styles.vLink} onClick={() => pushPath('/running')}>
-              some photos
+              some running photos
             </span>
             <span>, or </span>
             <span className={styles.vLink} onClick={() => pushPath('/stuff')}>

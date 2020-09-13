@@ -2,7 +2,11 @@ import styles from './nav.module.sass';
 import Logo from 'components/logo/logo';
 import Social from 'components/social/social';
 
+import useRouter from 'hooks/useRouter';
+
 export default function Nav() {
+  const { setState } = useRouter();
+
   return (
     <div id={styles.Nav}>
       <div id={styles.NavLeft}>
@@ -15,7 +19,11 @@ export default function Nav() {
           link='https://www.strava.com/athletes/48447345'
         />
         <Social path='/github.svg' link='https://github.com/aleksailosey' />
-        <img id={styles.MenuIcon} src='/menu.svg' />
+        <img
+          id={styles.MenuIcon}
+          src='/menu.svg'
+          onClick={() => setState({ mobileMenu: true })}
+        />
       </div>
     </div>
   );

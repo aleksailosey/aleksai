@@ -4,6 +4,8 @@ import Area from 'components/area/area';
 import AreaSection from 'components/area/areasection';
 import AreaLink from 'components/area/arealink';
 
+import { Link } from 'types/Link';
+
 const currentlyReading = [
   {
     text:
@@ -33,16 +35,11 @@ const haveRead = [
   }
 ];
 
-type Book = {
-  text: string;
-  link: string;
-};
-
-function populateLinks(books: Book[]): ReactNode {
+function populateLinks(books: Link[]): ReactNode {
   return (
     <>
-      {books.map((book: Book) => {
-        return <AreaLink {...book} />;
+      {books.map((book: Link, index: number) => {
+        return <AreaLink key={index} {...book} />;
       })}
     </>
   );
