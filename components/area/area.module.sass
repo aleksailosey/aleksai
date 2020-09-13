@@ -28,11 +28,12 @@
   font-size: 1.1em !important
   padding-bottom: 20px
 
-#AreaDescriptionCont span
+#AreaDescriptionCont span:not(.vLink)
   font-family: $avenir_roman
   color: #000
 
-#AreaDescriptionCont a
+
+#AreaDescriptionCont a, .vLink
   font-family: $avenir_roman
   color: #008cff
   text-decoration: underline
@@ -41,6 +42,8 @@
   &:hover
     opacity: 0.75
     transition: 100ms
+
+
 
 .AreaLinkCont
   display: flex

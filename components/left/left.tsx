@@ -1,12 +1,9 @@
+import useRouter from 'hooks/useRouter';
 import styles from './left.module.sass';
-
-import PathContext from 'contexts/PathContext';
-import { useContext } from 'react';
-
 import * as classNames from 'classnames';
 
 export default function Left() {
-  const { path, setPath } = useContext(PathContext);
+  const { path, pushPath } = useRouter();
 
   return (
     <div id={styles.LeftWrap}>
@@ -40,7 +37,7 @@ export default function Left() {
               [styles.LeftItemContActive]: path === elem.path
             })}
             onClick={() => {
-              setPath(elem.path);
+              pushPath(elem.path);
             }}
           >
             <span className={styles.LeftText}>{elem.name}</span>

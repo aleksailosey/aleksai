@@ -1,10 +1,8 @@
+import useRouter from 'hooks/useRouter';
 import styles from './logo.module.sass';
 
-import { useContext } from 'react';
-import PathContext from 'contexts/PathContext';
-
 export default function Logo() {
-  const { path, setPath } = useContext(PathContext);
+  const { path, pushPath } = useRouter();
 
   return (
     <div
@@ -13,7 +11,7 @@ export default function Logo() {
         if (window.scrollY > 5) {
           window.scrollTo(0, 0);
         } else if (path !== '/') {
-          setPath('/');
+          pushPath('/');
         }
       }}
     >

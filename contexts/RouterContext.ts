@@ -2,7 +2,11 @@ import { createContext } from 'react';
 
 const PathContext = createContext({
   path: '/',
-  setPath: (path: string) => {}
+  pushPath: (path: string) => {},
+  replacePath: (path: string) => {},
+  state: {},
+  setState: {},
+  language: 'en'
 });
 
 export default PathContext;
