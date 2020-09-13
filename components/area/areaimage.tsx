@@ -16,7 +16,7 @@ export default function AreaImage({ path, description }) {
     }, 500);
     setTimeout(() => {
       setTraceLoad(false);
-    }, 5000);
+    }, 1000);
   }, []);
 
   return (
