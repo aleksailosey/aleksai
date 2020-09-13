@@ -21,7 +21,7 @@ export default function AreaImage({ path, description }) {
       {process.env.NODE_ENV === 'production' ? (
         <img
           className={styles.AreaImage}
-          src={require('../../public/images' + path + '?lqip')}
+          src={require('../../public/images' + path + '?trace').trace}
         />
       ) : (
         <img className={styles.AreaImage} src={`/images${path}`} />
