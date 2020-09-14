@@ -54,6 +54,20 @@ export default function App({ Component, pageProps }) {
       <MobileMenu {...{ show: state.mobileMenu }} />
       <Head>
         <link rel='icon' href='/favicon.svg' />
+        <script
+          async
+          src='https://www.googletagmanager.com/gtag/js?id=UA-143197236-6'
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', 'UA-143197236-6');
+                  `
+          }}
+        />
       </Head>
       <Nav />
       <Content>
