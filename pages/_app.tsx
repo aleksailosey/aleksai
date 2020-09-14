@@ -3,7 +3,6 @@ import { useRouter } from 'next/router';
 
 import RouterContext from 'contexts/RouterContext';
 
-import ScreenLoader from 'components/screenloader/screenloader';
 import MobileMenu from 'components/mobilemenu/mobilemenu';
 import Head from 'next/head';
 import Nav from 'components/nav/nav';
@@ -16,8 +15,6 @@ import 'styles/index.sass';
 import 'styles/blob.css';
 
 export default function App({ Component, pageProps }) {
-  const [show, setShow] = useState<boolean>(false);
-
   const router = useRouter();
   const { pathname, push, replace } = router;
 
@@ -42,12 +39,6 @@ export default function App({ Component, pageProps }) {
     });
   });
 
-  useEffect(() => {
-    setTimeout(() => {
-      setShow(true);
-    }, 700);
-  }, []);
-
   return (
     <RouterContext.Provider
       value={{
@@ -60,7 +51,6 @@ export default function App({ Component, pageProps }) {
         setLanguage
       }}
     >
-      <ScreenLoader {...{ show }} />
       <MobileMenu {...{ show: state.mobileMenu }} />
       <Head>
         <link rel='icon' href='/favicon.svg' />
