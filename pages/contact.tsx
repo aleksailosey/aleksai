@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Contact | Aleksai Losey</title>
+        <title>Contact me | Aleksai Losey</title>
       </Head>
       <Area
         title='Contact me'
