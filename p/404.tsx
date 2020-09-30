@@ -2,34 +2,6 @@ import Head from 'next/head';
 import Area from 'components/area/area';
 import AreaLink from 'components/area/arealink';
 
-const sections = [
-  {
-    text: 'Home',
-    link: '/',
-    local: true
-  },
-  {
-    text: 'Bookshelf',
-    link: '/bookshelf',
-    local: true
-  },
-  {
-    text: 'Running',
-    link: '/running',
-    local: true
-  },
-  {
-    text: 'Fun stuff',
-    link: '/stuff',
-    local: true
-  },
-  {
-    text: 'Contact me',
-    link: '/contact',
-    local: true
-  }
-];
-
 export default function _404({
   pushPath,
   i18nData,
@@ -37,6 +9,34 @@ export default function _404({
   language,
   changeLanguage
 }) {
+  const sections = [
+    {
+      text: i18nData.Home,
+      link: '/',
+      local: true
+    },
+    {
+      text: i18nData.Bookshelf,
+      link: '/bookshelf',
+      local: true
+    },
+    {
+      text: i18nData.Running,
+      link: '/running',
+      local: true
+    },
+    {
+      text: i18nData.FunStuff,
+      link: '/stuff',
+      local: true
+    },
+    {
+      text: i18nData.ContactMe,
+      link: '/contact',
+      local: true
+    }
+  ];
+
   return (
     <>
       <Head>
