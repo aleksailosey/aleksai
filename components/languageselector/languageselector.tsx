@@ -6,6 +6,7 @@ export default function LanguageSelect({ path, language, changeLanguage }) {
   return (
     <div id={styles.SelectorContainer}>
       <img id={styles.SelectIcon} src='/globe.svg' />
+      <img id={styles.ChevronIcon} src='/chevron-down.svg' />
       <select
         id={styles.Selector}
         value={language}
