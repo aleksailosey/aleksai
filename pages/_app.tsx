@@ -107,7 +107,7 @@ export default function App({ Component, pageProps }) {
     setLanguage(newLanguage);
   };
 
-  var i18nData;
+  var i18nData = {};
   try {
     i18nData = require(`../i18n/${language}/index`).default;
   } catch (_) {}
