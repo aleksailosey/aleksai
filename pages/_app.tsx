@@ -19,7 +19,7 @@ import 'styles/index.sass';
 import 'styles/blob.css';
 
 import NProgress from 'nprogress';
-import 'nprogress/nprogress.css';
+import 'styles/nprogress.css';
 
 NProgress.configure({
   showSpinner: false
