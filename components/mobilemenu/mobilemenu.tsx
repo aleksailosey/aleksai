@@ -5,9 +5,13 @@ import useRouter from 'hooks/useRouter';
 
 import Social from 'components/social/social';
 
-export default function MobileMenu({ show }) {
-  const { path, pushPath, setState } = useRouter();
-
+export default function MobileMenu({
+  show,
+  path,
+  pushPath,
+  setState,
+  i18nData
+}) {
   var selectedFlag = false;
 
   return (
@@ -45,23 +49,23 @@ export default function MobileMenu({ show }) {
       </div>
       {[
         {
-          name: 'Home',
+          name: i18nData.Home,
           path: '/'
         },
         {
-          name: 'Bookshelf',
+          name: i18nData.Bookshelf,
           path: '/bookshelf'
         },
         {
-          name: 'Running',
+          name: i18nData.Running,
           path: '/running'
         },
         {
-          name: 'Fun stuff',
+          name: i18nData.FunStuff,
           path: '/stuff'
         },
         {
-          name: 'Contact me',
+          name: i18nData.ContactMe,
           path: '/contact'
         }
       ].map((section, index) => {

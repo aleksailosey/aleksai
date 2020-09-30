@@ -1,31 +1,28 @@
-import useRouter from 'hooks/useRouter';
 import styles from './left.module.sass';
 import * as classNames from 'classnames';
 
-export default function Left() {
-  const { path, pushPath } = useRouter();
-
+export default function Left({ path, pushPath, i18nData }) {
   return (
     <div id={styles.LeftWrap}>
       {[
         {
-          name: 'Home',
+          name: i18nData.Home,
           path: '/'
         },
         {
-          name: 'Bookshelf',
+          name: i18nData.Bookshelf,
           path: '/bookshelf'
         },
         {
-          name: 'Running',
+          name: i18nData.Running,
           path: '/running'
         },
         {
-          name: 'Fun stuff',
+          name: i18nData.FunStuff,
           path: '/stuff'
         },
         {
-          name: 'Contact me',
+          name: i18nData.ContactMe,
           path: '/contact'
         }
       ].map((elem) => {

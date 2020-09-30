@@ -1,14 +1,13 @@
-import useRouter from 'hooks/useRouter';
 import styles from './area.module.sass';
 
 type LinkProps = {
   text: string;
   link: string;
+  pushPath: Function;
   local?: boolean;
 };
 
-export default function AreaLink({ text, link, local }: LinkProps) {
-  const { pushPath } = useRouter();
+export default function AreaLink({ text, link, local, pushPath }: LinkProps) {
   return (
     <div className={styles.AreaLinkCont}>
       {local ? (

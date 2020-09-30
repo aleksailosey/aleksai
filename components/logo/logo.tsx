@@ -1,9 +1,6 @@
-import useRouter from 'hooks/useRouter';
 import styles from './logo.module.sass';
 
-export default function Logo() {
-  const { path, pushPath } = useRouter();
-
+export default function Logo({ path, pushPath }) {
   return (
     <div
       id={styles.LogoCont}

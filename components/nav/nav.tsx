@@ -2,15 +2,11 @@ import styles from './nav.module.sass';
 import Logo from 'components/logo/logo';
 import Social from 'components/social/social';
 
-import useRouter from 'hooks/useRouter';
-
-export default function Nav() {
-  const { setState } = useRouter();
-
+export default function Nav({ path, pushPath, setState }) {
   return (
     <div id={styles.Nav}>
       <div id={styles.NavLeft}>
-        <Logo />
+        <Logo {...{ path, pushPath }} />
       </div>
       <div id={styles.NavRight}>
         <div id={styles.NavRightSocialIcons}>
